@@ -13,16 +13,10 @@ public class EmployeeWage {
     }
 
     static void WageCalculate() {
-        int IS_PRESENT = 1, PartTimePresent = 2, WagePerHr = 20, FullDayHr = 8, TotalHr = 0, PartTimeHr = 4, DayPerMonth = 20;
+        int IS_PRESENT = 1, PartTimePresent = 2, WagePerHr = 20, FullDayHr = 8, TotalHr = 0, TotalSalary=0, PartTimeHr = 4, DayPerMonth = 20;
         for (int i = 0; i <= DayPerMonth; i++) {
             Random num = new Random();
             int Attendance = num.nextInt(3);
-            if (Attendance == IS_PRESENT)
-                System.out.println("Employee is Present");
-            else if (Attendance == PartTimePresent)
-                System.out.println("Employee is Present but for Part Time");
-            else
-                System.out.println("Employee is Absent");
 
             switch (Attendance) {
                 case 1:
@@ -36,5 +30,7 @@ public class EmployeeWage {
             }
         }
         System.out.println("Daily Employee Wage is: " + TotalHr);
+        TotalSalary=TotalHr*WagePerHr;
+        System.out.println("\nTotal salary is "+ TotalSalary);
     }
 }
