@@ -26,6 +26,9 @@ public class EmployeeWage {
             case 1:
                 TotalHr+=FullDayHr;
                 break;
+            case 2:
+                TotalHr+=PartTimeHr;
+                break;
             default:
                 TotalHr+=0;
         }
